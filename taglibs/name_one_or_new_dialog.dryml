@@ -71,7 +71,7 @@ FIXME: translate 'or', 'New', 'cancel', 'ok'.
     New <%= this_field_name %>
   </dialog-open-button>
   <dialog-box param buttons='&[["cancel", "hjq_dialog_box.close"], ["ok", "hjq_dialog_box.submitAndClose"]]' title="New #{this_field.humanize}" id="&dialog_id" > 
-    <formlet with="&this_type.new" update="&part_id" success="jQuery('##{part_id} select').val(jQuery('##{part_id} option:last').val())">
+    <formlet with="&this_type.new" update="&part_id" success="jQuery('##{part_id} input').val(jQuery('##{dialog_id} input.name-tag').val())">
       <field-list param/>
     </formlet>
   </dialog-box>
